@@ -1,0 +1,118 @@
+.menu {
+  grid-column: 3 / 5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.menu a,
+.menu .button {
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+  color: #222;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+}
+
+.menu .sub-list {
+  width: 180px;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background: rgb(255, 98, 98);
+  position: absolute;
+  border: 2px solid black;
+  display: none;
+  opacity: 0;
+  z-index: 200;
+}
+
+.menu .sub-list li {
+  padding: 10px 20px;
+}
+
+.menu .sub-list::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid red;
+}
+
+.menu [href="sobre.html"]:hover .sub-list,
+[href="sobre.html"].active .sub-list {
+  animation: showDown 1s forwards;
+  display: flex;
+}
+
+.menu .sub-list li:hover {
+  color: white;
+}
+
+.menu .button {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    margin-top: 0;
+    grid-column: 1 /-1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu ul {
+    top: 0;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-start;
+    width: 150px;
+    background: #fb5;
+    z-index: 200;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    display: none;
+  }
+
+  .menu .sub-list {
+    position: relative;
+    left: -20px;
+    width: 170px;
+  }
+
+  .menu .button {
+    display: flex;
+    align-items: center;
+    background: black;
+    border-radius: 4px;
+    width: 60px;
+    color: white !important;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    line-height: 10px;
+    height: 10px;
+    position: relative;
+    z-index: 250;
+  }
+
+  .menu .button.active + ul {
+    display: flex;
+  }
+}

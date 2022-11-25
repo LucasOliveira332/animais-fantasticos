@@ -1,0 +1,16 @@
+.content {
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: tomato;
+}
+
+.content span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

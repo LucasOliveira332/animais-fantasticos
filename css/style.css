@@ -1,0 +1,12 @@
+@import url("./global/global.css");
+@import url("./global/header.css");
+@import url("./global/footer.css");
+@import url("./Home/animals.css");
+@import url("./Home/faq.css");
+@import url("./Home/contact.css");
+@import url("./animation/showDown.css");
+@import url("./animation/showRight.css");
+@import url("./animation/slideDown.css");
+@import url("./animation/overflowDown.css");
+@import url("./models/login.css");
+@import url("./Home/animalNumber.css");
