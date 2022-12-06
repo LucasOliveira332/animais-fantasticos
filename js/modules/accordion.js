@@ -3,7 +3,6 @@ export default class Accordion {
     this.questList = document.querySelectorAll(questList);
   }
   activeAccordion() {
-    console.log(this.nextElementSibling);
     this.nextElementSibling.classList.toggle("active");
   }
   init() {
