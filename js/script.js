@@ -47,7 +47,6 @@ mousePosition.init();
 
 initShowDropDownMenu();
 initShowDropDownMenuMobile();
-
 initInOperationOrNot();
 initCustomValidation();
 initFeachTotalAnimals();
